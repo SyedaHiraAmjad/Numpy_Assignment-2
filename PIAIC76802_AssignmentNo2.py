@@ -72,6 +72,8 @@ def function3():
     a = np.arange(1, 100 * 10 + 1).reshape((100, 10))
     x = a[]
     # write your code here
+    import numpy as np
+    x = np.arange(35,98*10+1,35)
     return x
     """
     Expected Output:
