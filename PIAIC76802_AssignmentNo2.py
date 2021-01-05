@@ -141,7 +141,7 @@ def function6():
 # Task7
 def function7():
     #  Create an array of zeros with the same shape and type as X. Dont use reshape method
-    x = np.arange(4, dtype=np.int64)
+    #x = np.arange(4, dtype=np.int64)
 
     #Answer:
 
@@ -195,9 +195,9 @@ def function9():
 def function10():
     # Subtract the 1d array brr from the 2d array arr, such that each item of brr subtracts from respective row of arr.
 
-    arr = np.array([[3, 3, 3], [4, 4, 4], [5, 5, 5]])
-    brr = np.array([1, 2, 3])
-    subt =  # write your code here
+    #arr = np.array([[3, 3, 3], [4, 4, 4], [5, 5, 5]])
+    #brr = np.array([1, 2, 3])
+    #subt =   write your code here
     #Answer:
 
     # Subtracting 1d array from  2d array
@@ -218,8 +218,8 @@ def function10():
 def function11():
     # Replace all odd numbers in arr with -1 without changing arr.
 
-    arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    ans =  # write your code here
+    #arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    #ans =   write your code here
     #Answer:
     import numpy as np
     arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
@@ -239,12 +239,11 @@ def function12():
     # Create the following pattern without hardcoding. Use only numpy functions and the below input array arr.
     # HINT: use stacking concept
 
-    arr = np.array([1, 2, 3])
+    #arr = np.array([1, 2, 3])
     #Answer:
     import numpy as np
-    n = 3
-    arr = np.array([1, 2, 3])
-    ans = np.tile(arr, n)
+    arr = np.array([1,2,3])
+    ans = np.hstack((arr.repeat(3),np.tile(arr,3)))
     return ans
 
     """
@@ -257,7 +256,7 @@ def function12():
 def function13():
     # Set a condition which gets all items between 5 and 10 from arr.
 
-    arr = np.array([2, 6, 1, 9, 10, 3, 27])
+    #arr = np.array([2, 6, 1, 9, 10, 3, 27])
     #Answer:
     import numpy as np
     arr = np.array([2, 6, 1, 9, 10, 3, 27])
@@ -277,7 +276,7 @@ def function14():
     # Create an 8X3 integer array from a range between 10 to 34 such that the difference between each element is 1 and then Split the array into four equal-sized sub-arrays.
     # Hint use split method
 
-    arr = np.arange(10, 34, 1)  # write reshape code
+    #arr = np.arange(10, 34, 1)   write reshape code
     #Answer:
     import numpy as np
     arr = np.arange(10, 34, 1).reshape(8, 3)
@@ -297,7 +296,7 @@ def function14():
 def function15():
     # Sort following NumPy array by the second column
 
-    arr = np.array([[8, 2, -2], [-4, 1, 7], [6, 3, 9]])
+    #arr = np.array([[8, 2, -2], [-4, 1, 7], [6, 3, 9]])
     #Answer:
     arr1 = np.array([[8, 2, -2], [-4, 1, 7], [6, 3, 9]])
     arr = np.sort(arr1, axis=0)
@@ -315,12 +314,12 @@ def function15():
 def function16():
     # Write a NumPy program to join a sequence of arrays along depth.
 
-    x = np.array([[1], [2], [3]])
-    y = np.array([[2], [3], [4]])
+    #x = np.array([[1], [2], [3]])
+    #y = np.array([[2], [3], [4]])
     #Answer:
     x = np.array([[1], [2], [3]])
     y = np.array([[2], [3], [4]])
-    ans = np.concatenate((x, y), axis=1)
+    ans = np.dstack((x,y))
     return ans
 
     """
@@ -336,17 +335,10 @@ def function17():
     # replace numbers with "YES" if it divided by 3 and 5
     # otherwise it will be replaced with "NO"
     # Hint: np.where
-    arr = np.arange(1, 10 * 10 + 1).reshape((10, 10))
+    #arr = np.arange(1, 10 * 10 + 1).reshape((10, 10))
     #Answer:
     arr = np.arange(1, 10 * 10 + 1).reshape((10, 10))
-
-    def conditions(arr):
-        if arr / 3:
-            return "YES"
-        elif arr / 5:
-            return "YES"
-        else:
-            return "NO"
+    return np.where((arr%3==0) & (arr%5==0),"YES","NO")  
 
 
 # Expected Output
@@ -368,14 +360,14 @@ array([['NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'],
 # Task18
 def function18():
     # count values of "students" are exist in "piaic"
-    piaic = np.arange(100)
-    students = np.array([5, 20, 50, 200, 301, 7001])
+    #piaic = np.arange(100)
+    #students = np.array([5, 20, 50, 200, 301, 7001])
     #Answer:
-    import numpy as np
+    import numpy as np # Write you code Here
     piaic = np.arange(100)
-    students = np.array([5, 20, 50, 200, 301, 7001])
-    x = np.count_nonzero(students)
-    return x
+    students = np.array([5,20,50,200,301,7001])
+    x = students[students<100]   
+    return x.size
 
     # Expected output: 3
 #X--------------------------------------------------------------------------------------X
@@ -389,14 +381,14 @@ def function19():
     # then create variable "b" with value equal to 5
     # Now return output as "(X*W)+b:
 
-    X =  # Write your code here
+    #X =   Write your code here
     import numpy as np
     X = np.arange(1,26).reshape(5,5)
-    W =  # Write your code here
+    #W =   Write your code here
     W = np.transpose(X)
-    b =  # Write your code here
+    #b =   Write your code here
     b = 5
-    output =  # Write your code here
+    #output =   Write your code here
     output = (X*W)+b
     return output
     # expected output
