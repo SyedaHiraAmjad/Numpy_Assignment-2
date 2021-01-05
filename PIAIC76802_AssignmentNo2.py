@@ -69,8 +69,8 @@ array([[[10., 11., 12.],
 def function3():
     # extract those numbers from given array. those are must exist in 5,7 Table
     # example [35,70,105,..]
-    a = np.arange(1, 100 * 10 + 1).reshape((100, 10))
-    x = a[]
+    #a = np.arange(1, 100 * 10 + 1).reshape((100, 10))
+    #x = a[]
     # write your code here
     import numpy as np
     a = np.arange(1, 100*10+1).reshape((100,10))
