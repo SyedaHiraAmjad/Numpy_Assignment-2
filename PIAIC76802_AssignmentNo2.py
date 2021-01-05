@@ -145,9 +145,8 @@ def function7():
     #Answer:
 
     import numpy as np
-    x = np.array([0, 0, 0, 0], dtype=np.int64)
-    return x
-    return x.dtype
+    x = np.zeros((4), dtype=np.int64)
+    print(x,x.dtype)
     """
     Expected Output:
           array([0, 0, 0, 0], dtype=int64)
@@ -163,9 +162,6 @@ def function8():
     # using no.full
     x = np.full((2, 5), 6, dtype=np.uint)
     print(x, x.dtype)
-    # using no.ones
-    y = np.ones([2, 5], dtype=np.uint) * 6
-    print(y , y.dtype)
 
 
     """
