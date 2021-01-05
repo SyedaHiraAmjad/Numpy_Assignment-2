@@ -227,7 +227,7 @@ def function11():
     arr[odd_values] = -1
     ans = arr
     return ans
-
+    # We can also use arr[1::2] = -1
     """
     Expected Output:
              array([ 0, -1,  2, -1,  4, -1,  6, -1,  8, -1])
