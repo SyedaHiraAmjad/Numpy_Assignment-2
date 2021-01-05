@@ -391,9 +391,14 @@ def function19():
     # Now return output as "(X*W)+b:
 
     X =  # Write your code here
+    import numpy as np
+    X = np.arange(1,26).reshape(5,5)
     W =  # Write your code here
+    W = np.transpose(X)
     b =  # Write your code here
+    b = 5
     output =  # Write your code here
+    output = (X*W)+b
     return output
     # expected output
     """
